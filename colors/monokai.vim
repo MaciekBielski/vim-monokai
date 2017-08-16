@@ -77,6 +77,7 @@ let s:lightblack2 = { "gui": "#383a3e", "cterm": "237" }
 let s:darkblack   = { "gui": "#211F1C", "cterm": "233" }
 let s:grey        = { "gui": "#8F908A", "cterm": "243" }
 let s:lightgrey   = { "gui": "#575b61", "cterm": "238" }
+let s:lightgrey2  = { "gui": "#575b62", "cterm": "59" }
 let s:darkgrey    = { "gui": "#64645e", "cterm": "239" }
 let s:warmgrey    = { "gui": "#75715E", "cterm": "243" }
 let s:none       = { "gui": "#272822", "cterm": "NONE" }
@@ -85,7 +86,6 @@ let s:pink        = { "gui": "#F92772", "cterm": "197" }
 let s:green       = { "gui": "#A6E22D", "cterm": "148" }
 let s:aqua        = { "gui": "#66d9ef", "cterm": "81" }
 let s:yellow      = { "gui": "#E6DB74", "cterm": "186" }
-let s:lightbrown  = { "gui": "#E6DB74", "cterm": "145" }
 let s:orange      = { "gui": "#FD9720", "cterm": "208" }
 let s:purple      = { "gui": "#ae81ff", "cterm": "141" }
 let s:red         = { "gui": "#e73c50", "cterm": "196" }
@@ -111,7 +111,7 @@ call s:h("StatusLineNC",  { "fg": s:darkgrey,   "bg": s:warmgrey,     "format": 
 call s:h("TabLine",       { "fg": s:white,      "bg": s:darkblack,    "format": "reverse" })
 call s:h("Visual",        {                     "bg": s:lightgrey })
 call s:h("Search",        { "fg": s:black,      "bg": s:yellow })
-call s:h("MatchParen",    { "fg": s:black,      "bg": s:purple })
+call s:h("MatchParen",    { "fg": s:black,      "bg": s:orange })
 call s:h("Question",      { "fg": s:yellow })
 call s:h("ModeMsg",       { "fg": s:yellow })
 call s:h("MoreMsg",       { "fg": s:yellow })
@@ -139,10 +139,11 @@ call s:h("FoldColumn",    {                     "bg": s:none })
 "        Incsearch"
 
 " popup menu
-call s:h("Pmenu",         { "fg": s:lightblack, "bg": s:white })
+call s:h("Pmenu",         { "fg": s:aqua, "bg": s:lightgrey2 })
 call s:h("PmenuSel",      { "fg": s:aqua,       "bg": s:black,        "format": "reverse,bold" })
-call s:h("PmenuThumb",    { "fg": s:lightblack, "bg": s:grey })
+call s:h("PmenuThumb",    { "fg": s:pink, "bg": s:grey })
 "        PmenuSbar"
+"call s:h("PmenuSbar",    { "fg": s:lightblack, "bg": s:grey })
 
 " Generic Syntax Highlighting
 " ---------------------------
@@ -158,10 +159,10 @@ call s:h("Type",          { "fg": s:aqua })
 call s:h("Structure",     { "fg": s:aqua })
 call s:h("StorageClass",  { "fg": s:aqua })
 call s:h("Typedef",       { "fg": s:aqua })
-    
+
 call s:h("Identifier",    { "fg": s:green })
 call s:h("Function",      { "fg": s:green })
-                         
+
 call s:h("Statement",     { "fg": s:pink })
 call s:h("Operator",      { "fg": s:pink })
 call s:h("Label",         { "fg": s:pink })
@@ -175,7 +176,7 @@ call s:h("Include",       { "fg": s:pink })
 call s:h("Define",        { "fg": s:pink })
 call s:h("Macro",         { "fg": s:green })
 call s:h("PreCondit",     { "fg": s:green })
-                           
+
 call s:h("Special",       { "fg": s:purple })
 call s:h("SpecialChar",   { "fg": s:pink })
 call s:h("Delimiter",     { "fg": s:pink })
@@ -185,7 +186,7 @@ call s:h("Tag",           { "fg": s:pink })
 
 call s:h("Todo",          { "fg": s:orange,   "format": "bold,italic" })
 call s:h("Comment",       { "fg": s:warmgrey, "format": "italic" })
-                         
+
 call s:h("Underlined",    { "fg": s:green })
 call s:h("Ignore",        {})
 call s:h("Error",         { "fg": s:red, "bg": s:darkred })
@@ -230,11 +231,11 @@ call s:h("jsBuiltins",          { "fg": s:aqua })
 call s:h("jsArgsObj",           { "fg": s:aqua })
 call s:h("jsStatic",            { "fg": s:aqua })
 call s:h("jsSuper",             { "fg": s:aqua })
-call s:h("jsFuncArgRest",       { "fg": s:purple, "format": "italic" })                                 
+call s:h("jsFuncArgRest",       { "fg": s:purple, "format": "italic" })
 call s:h("jsFuncArgs",          { "fg": s:orange, "format": "italic" })
 call s:h("jsStorageClass",      { "fg": s:aqua })
 call s:h("jsDocTags",           { "fg": s:aqua,   "format": "italic" })
-                                 
+
 " Html
 call s:h("htmlTag",             { "fg": s:white })
 call s:h("htmlEndTag",          { "fg": s:white })
