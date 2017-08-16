@@ -70,7 +70,7 @@ endfunction
 " --------
 
 
-let s:white       = { "gui": "#E8E8E3", "cterm": "252" }
+let s:white       = { "gui": "#E8E8E3", "cterm": "15" }
 let s:black       = { "gui": "#272822", "cterm": "235" }
 let s:lightblack  = { "gui": "#2D2E27", "cterm": "236" }
 let s:lightblack2 = { "gui": "#383a3e", "cterm": "237" }
@@ -78,13 +78,14 @@ let s:darkblack   = { "gui": "#211F1C", "cterm": "233" }
 let s:grey        = { "gui": "#8F908A", "cterm": "243" }
 let s:lightgrey   = { "gui": "#575b61", "cterm": "238" }
 let s:darkgrey    = { "gui": "#64645e", "cterm": "239" }
-let s:warmgrey    = { "gui": "#75715E", "cterm": "59" }
+let s:warmgrey    = { "gui": "#75715E", "cterm": "243" }
 let s:none       = { "gui": "#272822", "cterm": "NONE" }
 
 let s:pink        = { "gui": "#F92772", "cterm": "197" }
 let s:green       = { "gui": "#A6E22D", "cterm": "148" }
 let s:aqua        = { "gui": "#66d9ef", "cterm": "81" }
 let s:yellow      = { "gui": "#E6DB74", "cterm": "186" }
+let s:lightbrown  = { "gui": "#E6DB74", "cterm": "145" }
 let s:orange      = { "gui": "#FD9720", "cterm": "208" }
 let s:purple      = { "gui": "#ae81ff", "cterm": "141" }
 let s:red         = { "gui": "#e73c50", "cterm": "196" }
@@ -103,7 +104,7 @@ let s:changebg    = { "gui": "#5f5f87", "cterm": "60" }
 call s:h("Normal",        { "fg": s:white,      "bg": s:none })
 call s:h("ColorColumn",   {                     "bg": s:lightblack })
 call s:h("CursorColumn",  {                     "bg": s:lightblack2 })
-call s:h("CursorLine",    {                     "bg": s:lightblack2 })
+call s:h("CursorLine",    {                     "bg": s:none })
 call s:h("NonText",       { "fg": s:lightgrey })
 call s:h("StatusLine",    { "fg": s:warmgrey,   "bg": s:none,        "format": "reverse" })
 call s:h("StatusLineNC",  { "fg": s:darkgrey,   "bg": s:warmgrey,     "format": "reverse" })
@@ -118,7 +119,7 @@ call s:h("ErrorMsg",      { "fg": s:black,      "bg": s:red,          "format": 
 call s:h("WarningMsg",    { "fg": s:red })
 call s:h("VertSplit",     { "fg": s:darkgrey,   "bg": s:none })
 call s:h("LineNr",        { "fg": s:grey,       "bg": s:lightblack })
-call s:h("CursorLineNr",  { "fg": s:orange,     "bg": s:lightblack })
+call s:h("CursorLineNR",  { "fg": s:white,     "bg": s:warmgrey })
 call s:h("SignColumn",    {                     "bg": s:lightblack })
 
 " misc
