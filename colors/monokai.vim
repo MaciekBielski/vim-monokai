@@ -111,7 +111,7 @@ call s:h("StatusLineNC",  { "fg": s:darkgrey,   "bg": s:warmgrey,     "format": 
 call s:h("TabLine",       { "fg": s:white,      "bg": s:darkblack,    "format": "reverse" })
 call s:h("Visual",        {                     "bg": s:lightgrey })
 call s:h("Search",        { "fg": s:black,      "bg": s:yellow })
-call s:h("MatchParen",    { "fg": s:black,      "bg": s:orange })
+call s:h("MatchParen",    { "fg": s:orange,      "bg": s:black })
 call s:h("Question",      { "fg": s:yellow })
 call s:h("ModeMsg",       { "fg": s:yellow })
 call s:h("MoreMsg",       { "fg": s:yellow })
